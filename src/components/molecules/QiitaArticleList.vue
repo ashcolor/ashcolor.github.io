@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { CONSTS } from "~/utils/constants";
+
 const articles = ref([]);
 
 onMounted(async () => {
-    const response = await axios.get(
-        "https://asia-northeast1-official-website-271208.cloudfunctions.net/qiita-items"
-    );
+    const response = await axios.get(CONSTS.QIITA_ITEMS_API_URL);
     if (response.status !== 200) {
     }
     console.log(response);

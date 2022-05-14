@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { CONSTS } from "~/utils/constants";
+
 const repos = ref([]);
 
 onMounted(async () => {
-    const response = await axios.get(
-        "https://asia-northeast1-official-website-271208.cloudfunctions.net/github-repos"
-    );
+    const response = await axios.get(CONSTS.GITHUB_REPOS_API_URL);
     if (response.status !== 200) {
     }
     repos.value = response.data.sort((a, b) => b["stargazers_count"] - a["stargazers_count"]);
