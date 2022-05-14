@@ -1,0 +1,52 @@
+<script setup>
+import { Icon } from "@iconify/vue";
+</script>
+
+<template>
+    <div class="flex flex-col gap-y-12 min-w-fit bg-slate-100 p-8">
+        <div>
+            <ProfileItemTitle>Web Engineer</ProfileItemTitle>
+            <h1 class="text-4xl">ashcolor</h1>
+        </div>
+        <div>
+            <ProfileItemTitle>accounts</ProfileItemTitle>
+            <div class="flex gap-2">
+                <a href="mailto:ashcolor27@gmail.com" target="_blank">
+                    <Icon icon="entypo:mail" height="24" />
+                </a>
+                <a href="https://github.com/ashcolor" target="_blank">
+                    <Icon icon="akar-icons:github-fill" height="24" />
+                </a>
+
+                <a href="https://twitter.com/ashcolor06" target="_blank">
+                    <Icon icon="akar-icons:twitter-fill" height="24" />
+                </a>
+
+                <div class="relative overflow-hidden h-6 w-12">
+                    <a href="https://qiita.com/ashcolor" target="_blank" class="absolute -top-3">
+                        <Icon icon="simple-icons:qiita" height="48" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ProfileItemTitle>frontend</ProfileItemTitle>
+                <p>JavaScript/Vue/Nuxt</p>
+            </div>
+            <div class="mt-2">
+                <ProfileItemTitle>backend</ProfileItemTitle>
+                <p>PHP/CakePHP/Laravel</p>
+            </div>
+        </div>
+        <div>
+            <ProfileItemTitle>Certification</ProfileItemTitle>
+            <p>FE(2011/9)</p>
+            <p>AP(2012/11)</p>
+            <p>Linuc Level1(2019/2)</p>
+        </div>
+        <div class="pa-0 mt-12">
+            <tech-tag :tag="tag" v-for="tag in tags" :key="tag.name" />
+        </div>
+    </div>
+</template>
