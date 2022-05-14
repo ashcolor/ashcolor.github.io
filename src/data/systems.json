@@ -19,7 +19,7 @@
         "backend": [],
         "infrastructure": ["Cloud Storage"],
         "note": "-",
-        "url": "https://ashcolor.github.io/key-switch-tester/dist",
+        "url": "https://ashcolor.github.io/key-switch-tester",
         "repository": "https://github.com/ashcolor/key-switch-tester",
         "image": "https://storage.googleapis.com/engineer-bbp/system/key_switch_tester.png"
     },
