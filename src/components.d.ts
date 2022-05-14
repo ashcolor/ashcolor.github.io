@@ -11,11 +11,12 @@ declare module '@vue/runtime-core' {
     ProfileContainer: typeof import('./components/organisms/ProfileContainer.vue')['default']
     ProfileItemTitle: typeof import('./components/atoms/ProfileItemTitle.vue')['default']
     QiitaArticleList: typeof import('./components/molecules/QiitaArticleList.vue')['default']
+    ReposArticleItem: typeof import('./components/molecules/ReposArticleItem.vue')['default']
     SystemCard: typeof import('./components/molecules/SystemCard.vue')['default']
     SystemList: typeof import('./components/molecules/SystemList.vue')['default']
-    TechContainer: typeof import('./components/molecules/TechContainer.vue')['default']
-    TechList: typeof import('./components/molecules/TechList.vue')['default']
     TechTag: typeof import('./components/atoms/TechTag.vue')['default']
+    'TechTag copy': typeof import('./components/molecules/TechTag copy.vue')['default']
+    TechTagList: typeof import('./components/molecules/TechTagList.vue')['default']
   }
 }
 

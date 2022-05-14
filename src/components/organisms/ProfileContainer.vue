@@ -3,7 +3,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-    <div class="flex flex-col gap-y-12 min-w-fit bg-slate-100 p-8">
+    <div class="flex flex-col gap-y-12 max-w-sm bg-slate-100 p-8">
         <div>
             <ProfileItemTitle>Web Engineer</ProfileItemTitle>
             <h1 class="text-4xl">ashcolor</h1>
@@ -45,8 +45,8 @@ import { Icon } from "@iconify/vue";
             <p>AP(2012/11)</p>
             <p>Linuc Level1(2019/2)</p>
         </div>
-        <div class="pa-0 mt-12">
-            <tech-tag :tag="tag" v-for="tag in tags" :key="tag.name" />
+        <div>
+            <TechTagList />
         </div>
     </div>
 </template>

@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { useTagStore } from "~/stores/tag";
 import { CONSTS } from "~/utils/constants";
+
+const tagStore = useTagStore();
+const { githubTags } = storeToRefs(tagStore);
 
 const repos = ref([]);
 
@@ -9,12 +13,10 @@ onMounted(async () => {
     }
     repos.value = response.data.sort((a, b) => b["stargazers_count"] - a["stargazers_count"]);
     repos.value = repos.value.filter((repo) => repo.fork === false);
+    repos.value.forEach((repo) => {
+        githubTags.value.push(...repo.topics);
+    });
 });
-
-// let tags = [];
-// this.githubRepos.forEach((repo) => {
-//     tags = tags.concat(repo.topics);
-// });
 </script>
 
 <template>
@@ -22,7 +24,7 @@ onMounted(async () => {
         <table class="table h-32">
             <tbody>
                 <template v-for="(repo, index) in repos">
-                    <TechList
+                    <ReposArticleItem
                         :count="repo.stargazers_count"
                         :tags="repo.topics"
                         :name="repo.name"

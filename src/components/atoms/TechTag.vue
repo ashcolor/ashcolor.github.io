@@ -8,17 +8,19 @@ const props = withDefaults(defineProps<Props>(), {
     number: 1,
 });
 
-const getSizeClass = (count) => {
-    if (count >= 3) {
-        return "default";
+const getBadgeSizeClass = (count) => {
+    if (count >= 4) {
+        return "basge-lg";
+    } else if (count >= 3) {
+        return "badge-md";
     } else if (count >= 2) {
-        return "small";
+        return "badge-sm";
     } else {
-        return "x-small";
+        return "badge-xs";
     }
 };
 </script>
 
 <template>
-    <span class="badge" :class="[getSizeClass(count)]">{{ name }} </span>
+    <span class="badge badge-outline py-2" :class="[getBadgeSizeClass(count)]">{{ name }} </span>
 </template>

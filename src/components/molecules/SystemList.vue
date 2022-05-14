@@ -1,14 +1,25 @@
 <script setup lang="ts">
+import { useTagStore } from "~/stores/tag";
 import SYSTEMDATA from "../../data/systems.json";
+
+const tagStore = useTagStore();
+const { systemTags } = storeToRefs(tagStore);
 
 const systems = computed(() => {
     return SYSTEMDATA;
 });
-// this.systems.forEach((system) => {
-//     ["frontend", "backend", "infrastructure"].forEach((type) => {
-//         tags = tags.concat(system[type]);
-//     });
-// });
+
+onMounted(() => {
+    saveTags(systems.value);
+});
+
+const saveTags = (systems: Array<any>) => {
+    systems.forEach((system) => {
+        ["frontend", "backend", "infrastructure"].forEach((type) => {
+            systemTags.value.push(...system[type]);
+        });
+    });
+};
 </script>
 
 <template>

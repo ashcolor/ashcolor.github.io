@@ -6,7 +6,7 @@ interface Props {
     count: number;
     tags: Array<string>;
     name: string;
-    description: string;
+    description?: string;
 }
 const props = withDefaults(defineProps<Props>(), {
     href: "",
@@ -31,8 +31,8 @@ const onClick = (href) => {
             <div v-for="tag in tags" class="badge badge-xs badge-outline">
                 {{ tag }}
             </div>
-            <p v-text="name"></p>
-            <p v-text="description"></p>
+            <p>{{ name }}</p>
+            <p>{{ description }}</p>
         </td>
     </tr>
 </template>
