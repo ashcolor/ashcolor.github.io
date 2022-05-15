@@ -15,7 +15,6 @@ declare module '@vue/runtime-core' {
     SystemCard: typeof import('./components/molecules/SystemCard.vue')['default']
     SystemList: typeof import('./components/molecules/SystemList.vue')['default']
     TechTag: typeof import('./components/atoms/TechTag.vue')['default']
-    'TechTag copy': typeof import('./components/molecules/TechTag copy.vue')['default']
     TechTagList: typeof import('./components/molecules/TechTagList.vue')['default']
   }
 }
