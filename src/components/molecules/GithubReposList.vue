@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFetch } from "@vueuse/core";
+import { useSort } from "~/composables/useSort";
 import { useTagStore } from "~/stores/tag";
 import { CONSTS } from "~/utils/constants";
 
@@ -11,9 +12,10 @@ const { isFetching, error, data } = useFetch(CONSTS.GITHUB_REPOS_API_URL);
 const repos = computed(() => {
     if (!data.value) return [];
     const repos = JSON.parse(data.value);
-    const filterdRepos = repos.filter((repo) => repo.fork === false);
-    return repos.sort((a, b) => b["stargazers_count"] - a["stargazers_count"]);
+    return repos.filter((repo) => repo.fork === false);
 });
+
+const { sortedList: sortedRepos } = useSort(repos, "stargazers_count", "desc");
 
 watch(repos, (newRepos) => {
     const tags = newRepos.map((repos) => repos.topics).flat();
@@ -27,7 +29,7 @@ watch(repos, (newRepos) => {
         <template v-else>
             <table class="table h-32">
                 <tbody>
-                    <template v-for="(repo, index) in repos">
+                    <template v-for="(repo, index) in sortedRepos">
                         <ReposArticleItem
                             :count="repo.stargazers_count"
                             :tags="repo.topics"

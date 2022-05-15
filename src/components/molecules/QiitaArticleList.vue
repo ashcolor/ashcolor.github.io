@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFetch } from "@vueuse/core";
+import { useSort } from "~/composables/useSort";
 import { useTagStore } from "~/stores/tag";
 import { CONSTS } from "~/utils/constants";
 
@@ -10,9 +11,10 @@ const { isFetching, error, data } = useFetch(CONSTS.QIITA_ITEMS_API_URL);
 
 const articles = computed(() => {
     if (!data.value) return [];
-    const articles = JSON.parse(data.value);
-    return articles.sort((a, b) => b["likes_count"] - a["likes_count"]);
+    return JSON.parse(data.value);
 });
+
+const { sortedList: sortedArticles } = useSort(articles, "likes_count", "desc");
 
 watch(articles, (newArticles) => {
     const tags = newArticles.map((article) => article.tags.map((tag) => tag.name)).flat();
@@ -26,7 +28,7 @@ watch(articles, (newArticles) => {
         <template v-else>
             <table class="table h-32">
                 <tbody>
-                    <template v-for="(article, index) in articles">
+                    <template v-for="(article, index) in sortedArticles">
                         <ReposArticleItem
                             :count="article.likes_count"
                             :tags="article.tags"
