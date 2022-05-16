@@ -56,20 +56,21 @@ const props = defineProps<Props>();
                 </template>
             </template>
             <div class="card-actions justify-end mt-2">
-                <button v-if="system.url !== ''" class="btn btn-sm bg-primary border-primary">
-                    <a :href="system.url" target="_blank">
-                        <Icon icon="akar-icons:link-out" height="16" class="inline" />
-                        Link
-                    </a>
+                <button
+                    v-if="system.url !== ''"
+                    class="btn btn-sm text-white gap-x-2 drop-shadow-md"
+                    @click="open(system.url, '_blank')"
+                >
+                    <Icon icon="akar-icons:link-out" height="16" />
+                    Link
                 </button>
                 <button
                     v-if="system.repository !== ''"
-                    class="btn btn-sm bg-primary border-primary"
+                    class="btn btn-sm text-white gap-x-2 drop-shadow-md"
+                    @click="open(system.repository, '_blank')"
                 >
-                    <a :href="system.repository" target="_blank" class="text-white">
-                        <Icon icon="akar-icons:github-fill" height="16" class="inline" />
-                        Github
-                    </a>
+                    <Icon icon="akar-icons:github-fill" height="16" />
+                    Github
                 </button>
             </div>
         </div>
