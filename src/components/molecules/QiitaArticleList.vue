@@ -11,13 +11,18 @@ const { isFetching, error, data } = useFetch(CONSTS.QIITA_ITEMS_API_URL);
 
 const articles = computed(() => {
     if (!data.value) return [];
-    return JSON.parse(data.value);
+    const tmpArticles = JSON.parse(data.value);
+    tmpArticles.forEach((article, index) => {
+        tmpArticles[index]["tags"] = article.tags.map((tag) => tag.name);
+    });
+    return tmpArticles;
 });
 
 const { sortedList: sortedArticles } = useSort(articles, "likes_count", "desc");
 
 watch(articles, (newArticles) => {
-    const tags = newArticles.map((article) => article.tags.map((tag) => tag.name)).flat();
+    if (!newArticles.value) return;
+    const tags = newArticles.value.map((article) => article.tags).flat();
     qiitaTags.value.push(...tags);
 });
 </script>
