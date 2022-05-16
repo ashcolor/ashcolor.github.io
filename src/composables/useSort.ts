@@ -1,8 +1,15 @@
-import { computed, Ref } from "vue";
+import { computed, ref, Ref } from "vue";
 
-export const useSort = (listRef: Ref<Array<any>>, key: string, order: "asc" | "desc" = "asc") => {
+type Direction = "asc" | "desc";
+export const useSort = (listRef: Ref<Array<any>>, key: string, direction: Direction = "asc") => {
+    const keyRef = ref(key);
+    const directionRef = ref(direction);
     const sortedList = computed(() => {
-        return listRef.value.sort((a, b) => b[key] - a[key]);
+        const sortedList = listRef.value.sort((a, b) => a[keyRef.value] - b[keyRef.value]);
+        if (directionRef.value === "desc") {
+            sortedList.reverse();
+        }
+        return sortedList;
     });
-    return { sortedList };
+    return { sortedList, keyRef, directionRef };
 };
