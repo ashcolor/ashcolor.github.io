@@ -16,23 +16,21 @@ type System = {
 interface Props {
     system: System;
 }
-const props = defineProps<Props>();
 
-// TODO error
-// const props = withDefaults(defineProps<Props>(), {
-//     system: {
-//         id: -1,
-//         created: "",
-//         name: "",
-//         frontend: [],
-//         backend: [],
-//         infrastructure: [],
-//         note: "",
-//         url: "",
-//         repository: "",
-//         image: "",
-//     }
-// });
+const props = withDefaults(defineProps<Props>(), {
+    system: {
+        id: -1,
+        created: "",
+        name: "",
+        frontend: [],
+        backend: [],
+        infrastructure: [],
+        note: "",
+        url: "",
+        repository: "",
+        image: "",
+    } as System,
+});
 </script>
 
 <template>
