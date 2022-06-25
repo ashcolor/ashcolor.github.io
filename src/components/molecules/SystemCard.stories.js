@@ -1,4 +1,5 @@
 import SystemCard from "./SystemCard.vue";
+import ButtonWithIcon from "./ButtonWithIcon.vue";
 
 export default {
     component: SystemCard,
@@ -8,7 +9,7 @@ export default {
 };
 
 const Template = (args) => ({
-    components: { SystemCard },
+    components: { SystemCard, ButtonWithIcon },
     setup() {
         return { args };
     },

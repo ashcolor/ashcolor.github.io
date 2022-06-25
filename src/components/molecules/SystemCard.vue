@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
+import ButtonWithIcon from "./ButtonWithIcon.vue";
 
 type System = {
     id: number;
@@ -31,6 +31,10 @@ const props = withDefaults(defineProps<Props>(), {
         image: "",
     } as System,
 });
+
+const openInNewTab = (url) => {
+    window.open(url, "_blank");
+};
 </script>
 
 <template>
@@ -54,22 +58,20 @@ const props = withDefaults(defineProps<Props>(), {
                 </template>
             </template>
             <div class="card-actions justify-end mt-2">
-                <button
+                <ButtonWithIcon
                     v-if="system.url !== ''"
-                    class="btn btn-sm text-white gap-x-2 drop-shadow-md"
-                    @click="open(system.url, '_blank')"
+                    text="Link"
+                    icon="akar-icons:link-out"
+                    @click="openInNewTab(system.url)"
                 >
-                    <Icon icon="akar-icons:link-out" height="16" />
-                    Link
-                </button>
-                <button
+                </ButtonWithIcon>
+                <ButtonWithIcon
                     v-if="system.repository !== ''"
-                    class="btn btn-sm text-white gap-x-2 drop-shadow-md"
-                    @click="open(system.repository, '_blank')"
+                    text="Github"
+                    icon="akar-icons:github-fill"
+                    @click="openInNewTab(system.repository)"
                 >
-                    <Icon icon="akar-icons:github-fill" height="16" />
-                    Github
-                </button>
+                </ButtonWithIcon>
             </div>
         </div>
     </div>
