@@ -6,7 +6,6 @@ export default {
         slot: {
             control: "string",
             description: "タイトル",
-            defaultValue: "タイトル",
         },
     },
 };

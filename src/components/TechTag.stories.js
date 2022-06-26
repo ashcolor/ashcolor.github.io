@@ -6,7 +6,6 @@ export default {
         name: {
             name: "name",
             type: { name: "string", required: true },
-            defaultValue: "-",
             description: "名前",
             control: {
                 type: "text",
@@ -15,7 +14,6 @@ export default {
         count: {
             name: "count",
             type: { name: "number", required: true },
-            defaultValue: 0,
             description: "カウント",
             control: { type: "range", min: 1, max: 30, step: 1 },
         },
