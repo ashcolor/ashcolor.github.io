@@ -3,7 +3,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-    <div class="flex flex-col gap-y-12 max-w-sm bg-slate-100 p-8">
+    <div class="md:max-w-sm flex flex-col gap-y-12 bg-slate-100 p-8">
         <div>
             <ProfileItemTitle>Web Engineer</ProfileItemTitle>
             <h1 class="text-4xl">ashcolor</h1>
