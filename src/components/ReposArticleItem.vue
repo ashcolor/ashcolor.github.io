@@ -5,34 +5,36 @@ interface Props {
     href: string;
     count: number;
     tags: Array<string>;
-    name: string;
+    title: string;
     description?: string;
 }
 const props = withDefaults(defineProps<Props>(), {
     href: "",
     count: 0,
-    tags: [] as Array<string>,
-    name: "",
+    tags: [],
+    title: "",
     description: "",
 });
 
-const onClick = (href) => {
+const onClick = (href: string) => {
     open(href, "_blank");
 };
 </script>
 
 <template>
-    <tr class="cursor-pointer" @click="onClick(href)">
-        <td>
-            <Icon icon="ant-design:star" color="black" width="24" height="24" class="inline" />
-            <span class="text-sm">+{{ count }}</span>
-        </td>
-        <td>
-            <div v-for="tag in tags" class="badge badge-xs badge-outline">
-                {{ tag }}
+    <li class="p-2">
+        <a class="link" @click="onClick(href)">{{ title }}</a>
+        <p class="text-xs text-slate-500">{{ description }}</p>
+        <div class="flex gap-2 text-slate-500">
+            <div>
+                <Icon icon="ant-design:star" width="16" height="16" class="inline" />
+                <span class="text-xs">{{ count }}</span>
             </div>
-            <p>{{ name }}</p>
-            <p>{{ description }}</p>
-        </td>
-    </tr>
+            <div>
+                <div v-for="tag in tags" class="badge badge-xs badge-outline">
+                    {{ tag }}
+                </div>
+            </div>
+        </div>
+    </li>
 </template>
