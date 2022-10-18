@@ -10,14 +10,14 @@
 
 <style>
 ::-webkit-scrollbar {
-    width: 12px; /* 横幅 */
+    width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #e4e4e7; /* ハンドルの色 */
+    background: #e4e4e7;
 }
 
 ::-webkit-scrollbar-track {
-    background: #00000000; /* 背景色 */
+    background: #00000000;
 }
 </style>
