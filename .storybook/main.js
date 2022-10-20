@@ -5,7 +5,6 @@ const { mergeConfig } = require("vite");
 
 module.exports = {
     stories: [
-        ,
         "../src/App.stories.@(js|jsx|ts|tsx)",
         "../src/**/*.stories.mdx",
         "../src/**/*.stories.@(js|jsx|ts|tsx)",
