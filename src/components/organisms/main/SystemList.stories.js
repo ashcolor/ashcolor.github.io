@@ -1,4 +1,4 @@
-import SystemList from "./SystemList.vue";
+import SystemList from "../SystemList.vue";
 
 export default {
     component: SystemList,

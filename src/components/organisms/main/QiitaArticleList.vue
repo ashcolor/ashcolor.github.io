@@ -28,19 +28,16 @@ watch(articles, (newArticles) => {
 </script>
 
 <template>
-    <div class="h-64 p-2 border overflow-y-scroll">
-        <template v-if="isFetching">Loading...</template>
-        <template v-else>
-            <ul class="h-32 divide-y-2">
-                <template v-for="(article, index) in sortedArticles">
-                    <ReposArticleItem
-                        :count="article.likes_count"
-                        :tags="article.tags"
-                        :title="article.title"
-                        :href="article.url"
-                    />
-                </template>
-            </ul>
-        </template>
-    </div>
+    <ListContainer :isLoading="isFetching">
+        <ul class="h-32 divide-y-2">
+            <template v-for="(article, index) in sortedArticles">
+                <ReposArticleItem
+                    :count="article.likes_count"
+                    :tags="article.tags"
+                    :title="article.title"
+                    :href="article.url"
+                />
+            </template>
+        </ul>
+    </ListContainer>
 </template>

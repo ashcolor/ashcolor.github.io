@@ -1,16 +1,16 @@
-import QiitaArticleList from "./QiitaArticleList.vue";
+import ProfileContainer from "./ProfileContainer.vue";
 
 export default {
-    component: QiitaArticleList,
+    component: ProfileContainer,
     argTypes: {},
 };
 
 const Template = (args) => ({
-    components: { QiitaArticleList },
+    components: { ProfileContainer },
     setup() {
         return { args };
     },
-    template: '<QiitaArticleList v-bind="args" />',
+    template: '<ProfileContainer v-bind="args" />',
 });
 
 export const Normal = Template.bind({});

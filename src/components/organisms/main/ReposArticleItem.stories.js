@@ -1,4 +1,4 @@
-import ReposArticleItem from "./ReposArticleItem.vue";
+import ReposArticleItem from "../ReposArticleItem.vue";
 
 export default {
     component: ReposArticleItem,
