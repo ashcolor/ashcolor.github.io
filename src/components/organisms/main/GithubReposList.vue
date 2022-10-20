@@ -24,22 +24,17 @@ watch(repos, (newRepos) => {
 </script>
 
 <template>
-    <div class="h-64 overflow-y-scroll border-2 border-accent-content">
-        <template v-if="isFetching">Loading...</template>
-        <template v-else>
-            <table class="table h-32">
-                <tbody>
-                    <template v-for="(repo, index) in sortedRepos">
-                        <ReposArticleItem
-                            :count="repo.stargazers_count"
-                            :tags="repo.topics"
-                            :name="repo.name"
-                            :description="repo.description"
-                            :href="repo.html_url"
-                        />
-                    </template>
-                </tbody>
-            </table>
-        </template>
-    </div>
+    <ListContainer :isLoading="isFetching">
+        <ul class="h-32 divide-y-2">
+            <template v-for="(repo, index) in sortedRepos">
+                <ReposArticleItem
+                    :count="repo.stargazers_count"
+                    :tags="repo.topics"
+                    :title="repo.name"
+                    :description="repo.description"
+                    :href="repo.html_url"
+                />
+            </template>
+        </ul>
+    </ListContainer>
 </template>

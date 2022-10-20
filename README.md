@@ -21,3 +21,9 @@ yarn dev
 ```
 yarn build
 ```
+
+## Start storybook
+
+```
+yarn storybook
+```

@@ -1,5 +1,5 @@
-import SystemCard from "./SystemCard.vue";
-import ButtonWithIcon from "./ButtonWithIcon.vue";
+import SystemCard from "../SystemCard.vue";
+import ButtonWithIcon from "../../atoms/ButtonWithIcon.vue";
 
 export default {
     component: SystemCard,

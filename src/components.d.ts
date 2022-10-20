@@ -5,18 +5,20 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ButtonWithIcon: typeof import('./components/ButtonWithIcon.vue')['default']
-    GithubReposList: typeof import('./components/GithubReposList.vue')['default']
-    MainContainer: typeof import('./components/MainContainer.vue')['default']
-    MyFooter: typeof import('./components/MyFooter.vue')['default']
-    ProfileContainer: typeof import('./components/ProfileContainer.vue')['default']
-    ProfileItemTitle: typeof import('./components/ProfileItemTitle.vue')['default']
-    QiitaArticleList: typeof import('./components/QiitaArticleList.vue')['default']
-    ReposArticleItem: typeof import('./components/ReposArticleItem.vue')['default']
-    SystemCard: typeof import('./components/SystemCard.vue')['default']
-    SystemList: typeof import('./components/SystemList.vue')['default']
-    TechTag: typeof import('./components/TechTag.vue')['default']
-    TechTagList: typeof import('./components/TechTagList.vue')['default']
+    ButtonWithIcon: typeof import('./components/atoms/ButtonWithIcon.vue')['default']
+    ContentTItle: typeof import('./components/atoms/ContentTItle.vue')['default']
+    GithubReposList: typeof import('./components/organisms/main/GithubReposList.vue')['default']
+    ListContainer: typeof import('./components/molecules/ListContainer.vue')['default']
+    MainContainer: typeof import('./components/organisms/main/MainContainer.vue')['default']
+    MyFooter: typeof import('./components/molecules/MyFooter.vue')['default']
+    ProfileContainer: typeof import('./components/organisms/drawer/ProfileContainer.vue')['default']
+    ProfileItemTitle: typeof import('./components/organisms/drawer/ProfileItemTitle.vue')['default']
+    QiitaArticleList: typeof import('./components/organisms/main/QiitaArticleList.vue')['default']
+    ReposArticleItem: typeof import('./components/organisms/main/ReposArticleItem.vue')['default']
+    SystemCard: typeof import('./components/organisms/main/SystemCard.vue')['default']
+    SystemList: typeof import('./components/organisms/main/SystemList.vue')['default']
+    TechTag: typeof import('./components/atoms/TechTag.vue')['default']
+    TechTagList: typeof import('./components/organisms/drawer/TechTagList.vue')['default']
   }
 }
 

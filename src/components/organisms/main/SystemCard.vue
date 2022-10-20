@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ButtonWithIcon from "./ButtonWithIcon.vue";
-
 type System = {
     id: number;
     created: string;
