@@ -1,4 +1,4 @@
-import QiitaArticleList from "../QiitaArticleList.vue";
+import QiitaArticleList from "./QiitaArticleList.vue";
 
 export default {
     component: QiitaArticleList,

@@ -1,42 +1,50 @@
-import ReposArticleItem from "../ReposArticleItem.vue";
+import ReposArticleItem from "./ReposArticleItem.vue";
 
 export default {
     component: ReposArticleItem,
     argTypes: {
         href: {
-            name: "遷移先URL",
+            name: "href",
             type: { name: "string", required: true },
-            description: "名前",
+            description: "遷移先URL",
             control: {
                 type: "text",
             },
         },
         count: {
-            name: "カウント",
+            name: "count",
             type: { name: "number", required: true },
             description: "カウント",
             control: { type: "range", min: 1, max: 30, step: 1 },
         },
         tags: {
-            name: "遷移先URL",
+            name: "tags",
             type: { name: "string", required: true },
-            description: "名前",
+            description: "タグ",
             control: {
                 type: "text",
             },
         },
         title: {
-            name: "タイトル",
+            name: "title",
             type: { name: "string", required: true },
-            description: "カウント",
+            description: "タイトル",
             control: {
                 type: "text",
             },
         },
         description: {
-            name: "説明",
-            type: { name: "string", required: true },
-            description: "カウント",
+            name: "description",
+            type: { name: "string", required: false },
+            description: "説明",
+            control: {
+                type: "text",
+            },
+        },
+        date: {
+            name: "date",
+            type: { name: "string", required: false },
+            description: "日付",
             control: {
                 type: "text",
             },
@@ -60,4 +68,5 @@ Normal.args = {
     tags: ["Vue.js", "NuxtJS"],
     title: "タイトルテキスト",
     description: "説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。",
+    date: "2020/01/01",
 };

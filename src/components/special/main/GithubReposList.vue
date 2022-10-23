@@ -3,6 +3,7 @@ import { useFetch } from "@vueuse/core";
 import { useSort } from "~/composables/useSort";
 import { useTagStore } from "~/stores/tag";
 import { CONSTS } from "~/utils/constants";
+import { util } from "~/utils/util";
 
 const tagStore = useTagStore();
 const { githubTags } = storeToRefs(tagStore);
@@ -33,6 +34,7 @@ watch(repos, (newRepos) => {
                     :title="repo.name"
                     :description="repo.description"
                     :href="repo.html_url"
+                    :date="util.transportFromISOStringToString(repo.updated_at)"
                 />
             </template>
         </ul>
