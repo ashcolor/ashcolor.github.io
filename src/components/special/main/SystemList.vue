@@ -15,12 +15,7 @@ systems.forEach((system) => {
 </script>
 
 <template>
-    <div class="flex flex-wrap justify-center gap-8 p-4 border">
-        <SystemCard
-            class="d-inline-block ma-6"
-            style="position: relative"
-            v-for="system in systems"
-            :system="system"
-        />
+    <div class="flex flex-row gap-8 w-full overflow-x-auto p-4 border">
+        <SystemCard v-for="system in systems" :system="system" />
     </div>
 </template>

@@ -36,7 +36,7 @@ const openInNewTab = (url) => {
 </script>
 
 <template>
-    <div class="card w-96 shadow">
+    <div class="card min-w-[24rem] shadow">
         <figure><img :src="system.image" class="h-64 object-contain" /></figure>
         <div class="card-body">
             <div class="card-title flex-col items-start gap-0">
