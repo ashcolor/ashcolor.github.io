@@ -32,7 +32,7 @@ import { Icon } from "@iconify/vue";
         <div>
             <div>
                 <ProfileItemTitle>frontend</ProfileItemTitle>
-                <p>JavaScript/Vue/Nuxt</p>
+                <p>JavaScript/TypeScript/Vue.js/NuxtJS</p>
             </div>
             <div class="mt-2">
                 <ProfileItemTitle>backend</ProfileItemTitle>
@@ -46,6 +46,7 @@ import { Icon } from "@iconify/vue";
             <p>Linuc Level1(2019/2)</p>
         </div>
         <div>
+            <ProfileItemTitle>Tags</ProfileItemTitle>
             <TechTagList />
         </div>
     </div>
