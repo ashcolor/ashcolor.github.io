@@ -1,4 +1,4 @@
-import ListContainer from "./ListContainer.vue";
+import ListContainer from "../molecules/ListContainer.vue";
 
 export default {
     component: ListContainer,

@@ -1,4 +1,4 @@
-import MyFooter from "./MyFooter.vue";
+import MyFooter from "../molecules/MyFooter.vue";
 
 export default {
     component: MyFooter,
