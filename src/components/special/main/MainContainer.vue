@@ -1,16 +1,16 @@
 <script setup></script>
 
 <template>
-    <div class="flex-shrink-10 flex flex-col gap-y-8 m-8">
-        <div>
+    <div class="grid gap-8 m-8">
+        <div class="xl:col-start-1 xl:col-end-3">
             <ContentTItle title="System" />
             <SystemList />
         </div>
-        <div>
+        <div class="xl:col-start-1 xl:col-end-2">
             <ContentTItle title="Github" />
             <GithubReposList />
         </div>
-        <div>
+        <div class="xl:col-start-2 xl:col-end-3">
             <ContentTItle title="Qiita" />
             <QiitaArticleList />
         </div>
