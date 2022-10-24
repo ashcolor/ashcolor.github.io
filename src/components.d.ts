@@ -5,20 +5,20 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AccountList: typeof import('./components/special/profile/AccountList.vue')['default']
-    ButtonWithIcon: typeof import('./components/general/ButtonWithIcon.vue')['default']
-    ContentTItle: typeof import('./components/general/ContentTItle.vue')['default']
-    GithubReposList: typeof import('./components/special/main/GithubReposList.vue')['default']
-    ListContainer: typeof import('./components/general/ListContainer.vue')['default']
-    MyFooter: typeof import('./components/general/MyFooter.vue')['default']
-    ProfileItemTitle: typeof import('./components/special/profile/ProfileItemTitle.vue')['default']
-    QiitaArticleList: typeof import('./components/special/main/QiitaArticleList.vue')['default']
-    ReposArticleItem: typeof import('./components/special/main/ReposArticleItem.vue')['default']
-    SystemCard: typeof import('./components/special/main/SystemCard.vue')['default']
-    SystemList: typeof import('./components/special/main/SystemList.vue')['default']
-    TechTag: typeof import('./components/general/TechTag.vue')['default']
-    TechTagList: typeof import('./components/special/profile/TechTagList.vue')['default']
-    TechTagWithCount: typeof import('./components/general/TechTagWithCount.vue')['default']
+    AccountList: typeof import('./components/pages/profile/AccountList.vue')['default']
+    ButtonWithIcon: typeof import('./components/parts/ButtonWithIcon.vue')['default']
+    ContentTItle: typeof import('./components/parts/ContentTItle.vue')['default']
+    GithubReposList: typeof import('./components/pages/main/GithubReposList.vue')['default']
+    ListContainer: typeof import('./components/parts/ListContainer.vue')['default']
+    MyFooter: typeof import('./components/pages/MyFooter.vue')['default']
+    ProfileItemTitle: typeof import('./components/pages/profile/ProfileItemTitle.vue')['default']
+    QiitaArticleList: typeof import('./components/pages/main/QiitaArticleList.vue')['default']
+    ReposArticleItem: typeof import('./components/pages/main/ReposArticleItem.vue')['default']
+    SystemCard: typeof import('./components/pages/main/SystemCard.vue')['default']
+    SystemList: typeof import('./components/pages/main/SystemList.vue')['default']
+    TechTag: typeof import('./components/parts/TechTag.vue')['default']
+    TechTagList: typeof import('./components/pages/profile/TechTagList.vue')['default']
+    TechTagWithCount: typeof import('./components/parts/TechTagWithCount.vue')['default']
   }
 }
 
