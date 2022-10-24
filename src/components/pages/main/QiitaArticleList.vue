@@ -3,6 +3,7 @@ import { useFetch } from "@vueuse/core";
 import { useSort } from "~/composables/useSort";
 import { useTagStore } from "~/stores/tag";
 import { CONSTS } from "~/utils/constants";
+import { util } from "~/utils/util";
 
 const tagStore = useTagStore();
 const { qiitaTags } = storeToRefs(tagStore);
@@ -36,6 +37,7 @@ watch(articles, (newArticles) => {
                     :tags="article.tags"
                     :title="article.title"
                     :href="article.url"
+                    :date="util.transportFromISOStringToString(article.updated_at)"
                 />
             </template>
         </ul>

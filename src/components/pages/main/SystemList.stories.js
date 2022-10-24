@@ -1,16 +1,16 @@
-import QiitaArticleList from "../QiitaArticleList.vue";
+import SystemList from "./SystemList.vue";
 
 export default {
-    component: QiitaArticleList,
+    component: SystemList,
     argTypes: {},
 };
 
 const Template = (args) => ({
-    components: { QiitaArticleList },
+    components: { SystemList },
     setup() {
         return { args };
     },
-    template: '<QiitaArticleList v-bind="args" />',
+    template: "<SystemList />",
 });
 
 export const Normal = Template.bind({});

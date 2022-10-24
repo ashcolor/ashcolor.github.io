@@ -1,16 +1,16 @@
-import ProfileContainer from "./ProfileContainer.vue";
+import AccountList from "./AccountList.vue";
 
 export default {
-    component: ProfileContainer,
+    component: AccountList,
     argTypes: {},
 };
 
 const Template = (args) => ({
-    components: { ProfileContainer },
+    components: { AccountList },
     setup() {
         return { args };
     },
-    template: '<ProfileContainer v-bind="args" />',
+    template: "<AccountList />",
 });
 
 export const Normal = Template.bind({});

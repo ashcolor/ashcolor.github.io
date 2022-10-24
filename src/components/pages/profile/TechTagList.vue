@@ -8,7 +8,7 @@ const tagCounts = computed(() => tagStore.tagCounts);
 <template>
     <div class="flex flex-wrap">
         <template v-for="tagCount in tagCounts">
-            <TechTag :name="tagCount.name" :count="tagCount.count" />
+            <TechTagWithCount :name="tagCount.name" :count="tagCount.count" />
         </template>
     </div>
 </template>

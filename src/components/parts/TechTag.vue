@@ -5,7 +5,7 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
     name: "",
-    number: 1,
+    count: 1,
 });
 
 const getBadgeSizeClass = (count) => {

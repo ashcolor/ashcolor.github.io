@@ -1,0 +1,42 @@
+import { ArgsTable } from "@storybook/addon-docs";
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Components/Introduction" />
+
+# Introduction
+
+## ディレクトリ定義
+
+### 構造
+
+```
+components
+├──pages
+│   ├──[ページ名]
+│   │   ├──[ページ名][コンポーネント名]
+│   │   ├──[ページ名][コンポーネント名]
+│   │   └...
+│   ├──[ページ名]
+│   │   ├──[ページ名][コンポーネント名]
+│   │   ├──[ページ名][コンポーネント名]
+│   │   └...
+│   ├──...
+│   ├── MyFooter.vue
+│   └ MyHeader.vue
+├──parts
+├──[コンポーネント名]
+├──[コンポーネント名]
+└...
+```
+
+### 説明
+
+-   pages
+    -   ページ特有のコンポーネント
+-   parts
+    -   汎用的なコンポーネント
+
+## Documents
+
+-   [Write stories](https://storybook.js.org/docs/vue/writing-stories/introduction)
+-   [Write docs](https://storybook.js.org/docs/vue/writing-docs/docs-page)
