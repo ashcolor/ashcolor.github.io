@@ -1,42 +1,60 @@
 [
     {
-        "id": 4,
+        "created": "2023/06/22",
+        "name": "OpenAI Apps",
+        "frontend": ["Vue.js", "Nuxt.js"],
+        "backend": ["Prisma"],
+        "infrastructure": ["Vercel"],
+        "note": "-",
+        "url": "https://blog.ashcolor.jp/",
+        "repository": "https://github.com/ashcolor/ashcolor-blog",
+        "image": "https://storage.googleapis.com/engineer-bbp/system/openai-apps.png"
+    },
+    {
+        "created": "2023/03/12",
+        "name": "個人ブログ",
+        "frontend": ["Vue.js", "Nuxt.js"],
+        "backend": [],
+        "infrastructure": ["Vercel"],
+        "note": "-",
+        "url": "https://blog.ashcolor.jp/",
+        "repository": "https://github.com/ashcolor/ashcolor-blog",
+        "image": "https://storage.googleapis.com/engineer-bbp/system/my-blog.png"
+    },
+    {
         "created": "2020/10/24",
         "name": "Google Maps APIデモ",
         "frontend": ["Vue.js", "Nuxt.js", "Google Maps API"],
         "backend": [],
-        "infrastructure": [],
+        "infrastructure": ["GitHub Pages"],
         "note": "-",
         "url": "https://ashcolor.github.io/google-maps-api-demo",
         "repository": "https://github.com/ashcolor/google-maps-api-demo",
         "image": "https://storage.googleapis.com/engineer-bbp/system/google_maps_api_demo.png"
     },
     {
-        "id": 5,
         "created": "2020/07/04",
         "name": "Key Switch Tester",
         "frontend": ["Vue.js", "Web Audio API"],
         "backend": [],
-        "infrastructure": ["Cloud Storage"],
+        "infrastructure": ["GitHub Pages", "Cloud Storage"],
         "note": "-",
         "url": "https://ashcolor.github.io/key-switch-tester",
         "repository": "https://github.com/ashcolor/key-switch-tester",
         "image": "https://storage.googleapis.com/engineer-bbp/system/key_switch_tester.png"
     },
     {
-        "id": 1,
         "created": "2020/03/15",
         "name": "個人HP",
         "frontend": ["Vue.js", "Nuxt.js"],
         "backend": [],
-        "infrastructure": ["Cloud Run", "Cloud Storage", "Cloud Functions"],
+        "infrastructure": ["Amplify", "Cloud Storage"],
         "note": "-",
         "url": "https://ashcolor.work/welcome",
         "repository": "https://github.com/ashcolor/official-website",
         "image": "https://storage.googleapis.com/engineer-bbp/system/my_hp.png"
     },
     {
-        "id": 3,
         "created": "2019/12/29",
         "name": "Chord Dictionary",
         "frontend": ["Vue.js", "Web Audio API"],
@@ -48,7 +66,6 @@
         "image": "https://storage.googleapis.com/engineer-bbp/system/chord_dictionary.jpg"
     },
     {
-        "id": 2,
         "created": "2018/10/20",
         "name": "大合奏！バンドブラザーズP 配信曲リスト",
         "frontend": [],
@@ -56,7 +73,7 @@
         "infrastructure": ["Compute Engine", "Cloud SQL"],
         "note": "-",
         "url": "",
-        "repository": "https://github.com/ashcolor/bbp-db-docker",
+        "repository": "https://github.com/ashcolor/bbp-db",
         "image": "https://storage.googleapis.com/engineer-bbp/system/bbp-db.png"
     }
 ]
