@@ -31,8 +31,8 @@
                 </div>
                 <div>
                     <ProfileItemTitle>Certification</ProfileItemTitle>
-                    <p>FE(2011/9)</p>
-                    <p>AP(2012/11)</p>
+                    <p>FE(2012/11)</p>
+                    <p>AP(2016/12)</p>
                     <p>Linuc Level1(2019/2)</p>
                 </div>
                 <div>
