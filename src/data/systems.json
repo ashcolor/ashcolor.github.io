@@ -6,8 +6,8 @@
         "backend": ["Prisma"],
         "infrastructure": ["Vercel"],
         "note": "-",
-        "url": "https://blog.ashcolor.jp/",
-        "repository": "https://github.com/ashcolor/ashcolor-blog",
+        "url": "",
+        "repository": "https://github.com/ashcolor/openai-apps",
         "image": "https://storage.googleapis.com/engineer-bbp/system/openai-apps.png"
     },
     {
