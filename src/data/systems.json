@@ -8,7 +8,7 @@
         "note": "-",
         "url": "https://blog.ashcolor.jp/",
         "repository": "https://github.com/ashcolor/ashcolor-blog",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/openai-apps.png"
+        "image": "/img/openai-apps.png"
     },
     {
         "created": "2023/03/12",
@@ -19,7 +19,7 @@
         "note": "-",
         "url": "https://blog.ashcolor.jp/",
         "repository": "https://github.com/ashcolor/ashcolor-blog",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/my-blog.png"
+        "image": "/img/my-blog.png"
     },
     {
         "created": "2020/10/24",
@@ -30,7 +30,7 @@
         "note": "-",
         "url": "https://ashcolor.github.io/google-maps-api-demo",
         "repository": "https://github.com/ashcolor/google-maps-api-demo",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/google_maps_api_demo.png"
+        "image": "/img/google_maps_api_demo.png"
     },
     {
         "created": "2020/07/04",
@@ -41,7 +41,7 @@
         "note": "-",
         "url": "https://ashcolor.github.io/key-switch-tester",
         "repository": "https://github.com/ashcolor/key-switch-tester",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/key_switch_tester.png"
+        "image": "/img/key_switch_tester.png"
     },
     {
         "created": "2020/03/15",
@@ -52,7 +52,7 @@
         "note": "-",
         "url": "https://ashcolor.work/welcome",
         "repository": "https://github.com/ashcolor/official-website",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/my_hp.png"
+        "image": "/img/my_hp.png"
     },
     {
         "created": "2019/12/29",
@@ -63,7 +63,7 @@
         "note": "-",
         "url": "https://chrome.google.com/webstore/detail/chord-dictionary/lnefagbhokamcaedbeopnhdabkcemkcf",
         "repository": "https://github.com/ashcolor/chord-dictionary",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/chord_dictionary.jpg"
+        "image": "/img/chord_dictionary.jpg"
     },
     {
         "created": "2018/10/20",
@@ -74,6 +74,6 @@
         "note": "-",
         "url": "",
         "repository": "https://github.com/ashcolor/bbp-db",
-        "image": "https://storage.googleapis.com/engineer-bbp/system/bbp-db.png"
+        "image": "/img/bbp-db.png"
     }
 ]
